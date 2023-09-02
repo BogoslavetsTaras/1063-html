@@ -1,0 +1,76 @@
+/* html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+} */
+
+body {
+    margin: 0; /* Всі зовнішні відступи (margin) на 0 */
+    padding: 0; /* Всі внутрішні відступи (padding) на 0 */
+    font-family: Arial, sans-serif;
+    background-color: rgb(184, 180, 175);
+  }
+
+
+.attention{
+    width: 1980px; /* Загальна ширина екрану 1980 пікселів */
+    line-height: 48px; /* Встановлюємо висоту рядка рівною висоті елемента для 
+    margin: 0 auto; /* Вирівнюємо контейнер по центру */
+    background-color: red; /* Змінюємо колір фону на червоний */
+    color: rgb(255, 255, 255);
+  
+}
+
+
+.attention__message{
+    width: 1200px;
+    height: 37px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+
+.left-align {
+    text-align: left; /* Вирівнювання тексту по лівій стороні */
+}
+
+.right-align {
+    text-align: right; /* Вирівнювання тексту по правій стороні */
+}
+
+.attention__email,
+.attention__phone {
+    color: white; /* Колір тексту для посилань */
+    text-decoration: none; /* Забирає підкреслення для посилань */
+    margin-right: 20px; /* Відступ між посиланнями */
+}
+
+
+
+
+.container{
+max-width: 1200px;
+margin: 0 auto; 
+
+
+}
+
+
+
+
+
+/* .h3 {
+    color: D60307;
+}
+
+.menu__list-link {
+    color: D60307;
+} */
