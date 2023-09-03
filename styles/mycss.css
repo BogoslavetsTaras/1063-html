@@ -1,76 +1,146 @@
-/* html{
-    box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before{
-    box-sizing: inherit;
-} */
-
-body {
-    margin: 0; /* Всі зовнішні відступи (margin) на 0 */
-    padding: 0; /* Всі внутрішні відступи (padding) на 0 */
-    font-family: Arial, sans-serif;
-    background-color: rgb(184, 180, 175);
+* {
+    margin: 0;
+    padding: 0;
   }
-
-
-.attention{
-    width: 1980px; /* Загальна ширина екрану 1980 пікселів */
-    line-height: 48px; /* Встановлюємо висоту рядка рівною висоті елемента для 
-    margin: 0 auto; /* Вирівнюємо контейнер по центру */
-    background-color: red; /* Змінюємо колір фону на червоний */
-    color: rgb(255, 255, 255);
   
-}
-
-
-.attention__message{
+  img {
+    width: 100%;
+    /* 100% ширини від батьківського контейнера*/
+    /*width: 300px; /* ширина картинки */
+  }
+  
+  .main__container {
+    display: flex;
+    /* Flex одномірний */
+    /*display: grid; /*Властивоті дисплея міняємо на grid - сітка*/
+    /*grid-template-columns: 1fr 1fr 1fr; /* Вказуємо кількість стовбців в даномк випадку 3 одинакові*/
+    /*grid-template-columns: 1fr 1fr 1fr; /* Вказуємо кількість стовбців в даномк випадку 3 */
+    /*grid-template-rows: repeat(5, 500px); /* Вказуємо висоту рудків*/
+    /*background-color: #222323; /* Колір чорний з сайту*/
+    /*background-color: #f40106; /* Колір червоний з сайту*/
+    background-color: #e0e0e0;
+    /* Колір світло сірий з сайту*/
+    /*background-color: #9b9b9b; /* Колір темно сірий з сайту*/
+  }
+  
+  .attention__heder {
+    max-width: 100%;
+    /* 100% ширини від батьківського контейнера*/
+    /*width: 1980px; /* Загальна ширина екрану 1980 пікселів */
+    height: 48px;
+    /* Встановлюємо висоту рядка рівною висоті елемента для */
+    margin: 0 auto; /* Вирівнюємо контейнер по центру */
+    background-color: #f40106;
+    /*Змінюємо колір фону на червоний background-color: rgb(214, 3, 7);
+      color: rgb(255, 255, 255);*/
+  }
+  
+  .attention__message {
     width: 1200px;
     height: 37px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
+    margin: 0 auto; /* встановлює зовнішні відступи блоку 0*/
+    display: flex; /*дозволяє використовувати Flexbox для керування внутрішнім розташуванням дочірніх елементів*/
+    justify-content: space-between; /*Ця властивість Flexbox вирівнює дочірні елементи по горизонталі так, щоб вони розташовувалися відступаючи один від одного на максимальну можливу відстань.*/
     align-items: center;
-    margin: 0 auto;
-
-}
-
-
-.left-align {
+  }
+  
+  .attention__message > p {
     text-align: left; /* Вирівнювання тексту по лівій стороні */
-}
-
-.right-align {
-    text-align: right; /* Вирівнювання тексту по правій стороні */
-}
-
-.attention__email,
-.attention__phone {
-    color: white; /* Колір тексту для посилань */
-    text-decoration: none; /* Забирає підкреслення для посилань */
-    margin-right: 20px; /* Відступ між посиланнями */
-}
-
-
-
-
-.container{
-max-width: 1200px;
-margin: 0 auto; 
-
-
-}
-
-
-
-
-
-/* .h3 {
-    color: D60307;
-}
-
-.menu__list-link {
-    color: D60307;
-} */
+  }
+  
+  .attention__comtact {
+    list-style: none;
+    /* Забирає крапки в списку*/
+    padding: 0;
+    /* Знімаємо відступи */
+    display: flex;
+    /* Встановлюємо відображення в рядок */
+  }
+  
+  .attention__email,
+  .attention__phone {
+    text-decoration: none;
+    /* Забирає підкреслення для посилань */
+    margin-right: 20px;
+    /* Відступ між посиланнями */
+  }
+  
+  .attention__email,
+  .attention__phone,
+  .attention__message {
+    color: white;
+    /* Колір тексту для посилань */
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 6px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Вирівнюємо контейнер по центру */
+  }
+  
+  /*------------Navbar Logo----------------*/
+  .navbar__heder {
+    background-color: #222323;
+  }
+  
+  .container {
+    display: flex; /* Розміщуємо логотип навбар і контакт в один ряд*/
+  }
+  
+  .logo__img {
+    width: 168px;
+    height: 39.95x;
+    text-align: left;
+    padding: 30px 30px;
+  }
+  
+  /*------------Navbar----------------*/
+  
+  .navbar__menu {
+    list-style: none;
+    display: flex; /* Перетворюємо в рядок*/
+    align-items: center; /* Вирівнює по вертикалі*/
+    width: 100%;
+  }
+  
+  .menu-list-item {
+    margin-right: 30px; /*Задаю відступ 20px між */
+  }
+  
+  .menu__list {
+    list-style: none; /* Прибрати маркери списку */
+    padding: 0; /* Видалити внутрішні відступи */
+    margin: 0; /* Видалити зовнішні відступи */
+  }
+  
+  .menu__list-link {
+    text-decoration: none; /* Прибрати підкреслення для посилань */
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /*-----------Social-----------*/
+  
+  .contact__menu {
+    list-style: none;
+    display: flex; /* Встановлюємо відображення блоків як flex-контейнер */
+    align-items: center; /* Вирівнюємо по вертикалі по центру */
+    justify-content: flex-end; /* Вирівнюємо по горизонталі по правому краю */
+    width: 100%; /* Розширюємо контейнер на всю доступну ширину */
+  }
+  
+  .social__list {
+    display: flex; /* Встановлюємо відображення блоків як flex-контейнер */
+  }
+  
+  .social__item {
+    list-style: none;
+    margin-right: 15px; /*Задаю відступ 20px між елементами*/
+  }
+  
